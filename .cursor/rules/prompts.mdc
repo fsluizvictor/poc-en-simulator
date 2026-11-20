@@ -1,0 +1,14 @@
+---
+description: Interviewer and end-of-session feedback prompts
+globs:
+  - prompts/**
+alwaysApply: false
+---
+
+# Prompts
+
+`entrevistador.txt` is spoken English: one question per turn, no correction, no score, no markdown.
+
+`feedback.txt` is Brazilian Portuguese in exactly three blocks: `Pontos positivos`, `Pontos de melhoria`, `Próximo passo`. Each comment quotes the transcript. An empty or noisy transcript is an insufficient sample. Do not claim fluency.
+
+Do not add a sample answer that could be read as a real candidate turn.

@@ -1,0 +1,25 @@
+---
+description: Local BFF turn contract for the voice interview
+globs:
+  - api/**/*.py
+  - scripts/**/*.py
+  - tests/**/*.py
+alwaysApply: false
+---
+
+# API
+
+One turn is one synchronous request: audio in, interviewer text and audio out.
+
+Routes stay `GET /api/health`, `POST /api/sessions`, `POST /api/sessions/{id}/turns`, `POST /api/sessions/{id}/end`.
+
+- Model ids, `VERBATIM`, language, and voice live in `api/settings.py`.
+- `transcribe_audio` gets no system instruction. Dialogue uses `prompts/entrevistador.txt`. Feedback uses `prompts/feedback.txt` and runs only on end.
+- Clear the uploaded audio after transcription. Session text stays in the process dict and is dropped on end.
+- Keep FastAPI and `google-genai`. Do not add a package, a database, a websocket, or a second provider.
+- Tests use `unittest` and mock Gemini.
+
+```python
+transcript = gemini_client.transcribe_audio(audio_bytes, mime_type)
+audio_bytes = b""
+```

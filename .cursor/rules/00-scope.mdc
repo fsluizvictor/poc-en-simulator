@@ -1,0 +1,15 @@
+---
+description: Stay inside the local voice-interview proof of concept and stop extra exploration
+alwaysApply: true
+---
+
+# Scope
+
+`AGENTS.md` is the map. Open the one row that matches the task, then implement.
+
+- Change only what the user asked. Leave the next sprint deliverable untouched.
+- Record a transcript, timing, citation, or test result only from a run in this session.
+- Keep `GEMINI_API_KEY` in the process environment.
+- When the task needs the microphone, stop and ask the user to speak.
+
+Do not search sibling repositories or the web to rediscover the stack.

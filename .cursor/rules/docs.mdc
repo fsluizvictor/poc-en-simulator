@@ -1,0 +1,12 @@
+---
+description: Sprint notes are evidence, written in Brazilian Portuguese
+globs:
+  - docs/**/*.md
+alwaysApply: false
+---
+
+# Docs
+
+Write new notes in Brazilian Portuguese under `docs/sprint-N/`, with the header shape of `docs/sprint-1/requisitos-do-fluxo.md`.
+
+Record the command output from the run, including an empty transcript and the error text. Leave a closed sprint file unchanged, including a failed recognition.

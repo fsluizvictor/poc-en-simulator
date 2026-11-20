@@ -1,0 +1,14 @@
+---
+description: Single local interview screen
+globs:
+  - web/**/*.{js,jsx,css,html}
+alwaysApply: false
+---
+
+# Web
+
+One screen. The only scenario string is `Entrevista de emprego — Tecnologia`.
+
+- Call `http://127.0.0.1:8765`. The API key never appears in client code.
+- Capture with `MediaRecorder`, POST the blob, play the returned audio.
+- Keep React 18 and Vite. No UI library, account screen, scenario picker, or websocket.
